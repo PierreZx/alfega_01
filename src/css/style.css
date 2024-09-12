@@ -23,6 +23,7 @@ a {
   color: #fff;
 }
 
+
 .header {
   position: relative;
   width: 100%;
@@ -674,6 +675,7 @@ ul {
   left: 20px;
   font-size: 12px;
 }
+
 /*responsividade*/
 @media screen and (max-width: 768px) {
   .card-servico-principal {
@@ -700,7 +702,7 @@ ul {
 }
 
 /* Responsividade para telas menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   .header {
     height: 100vh; /* Ajusta a altura do header para telas menores */
     padding: 20px; /* Ajusta o padding do header */
@@ -727,6 +729,7 @@ ul {
     padding: 1rem; /* Adiciona algum padding ao redor da container */
     width: 100%; /* Ajusta a largura para ocupar a largura total disponível */
     box-sizing: border-box; /* Inclui padding e bordas na largura e altura total do elemento */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o tamanho do card */
   }
 
   .container-cards-inicio-1 {
@@ -734,18 +737,14 @@ ul {
     gap: 1rem; /* Espaçamento opcional entre os itens */
   }
 
-  .container-cards-inicio-1 .img {
-    width: 100%; /* Faz com que a imagem ocupe a largura total disponível */
-  }
-
-  .container-cards-inicio-1 ul {
-    flex-direction: column; /* Alinha os itens da lista em uma coluna */
-    gap: 1rem; /* Espaçamento opcional entre os itens */
-  }
-
+  .container-cards-inicio-1 .img,
+  .card-aleatorio img,
   .carousel-item img {
-    width: 60px; /* Ajusta o tamanho das imagens no carrossel */
-    height: 60px; /* Ajusta o tamanho das imagens no carrossel */
+    width: 300px; /* Ajusta a largura da imagem */
+    height: 300px; /* Ajusta a altura da imagem */
+    object-fit: cover; /* Garante que a imagem mantenha o aspecto e não estique */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
   }
 
   .titulo-inicio h2::before {
@@ -759,8 +758,9 @@ ul {
 
   .cards {
     width: 100%; /* Ajusta a largura dos cartões */
-    height: 400px; /* Ajusta a altura dos cartões */
+    height: auto; /* Ajusta a altura dos cartões automaticamente */
   }
+
   .rodape {
     flex-direction: column;
     align-items: center;
@@ -790,33 +790,17 @@ ul {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .navbar {
-    padding: 0.5rem; /* Ajusta o padding da navbar */
-  }
-
-  .mobile-menu {
-    padding-top: 2rem; /* Ajusta o padding do menu móvel */
-  }
-
+/* Responsividade para telas muito pequenas */
+@media screen and (max-width: 320px) {
+  .container-cards-inicio .img,
+  .container-cards-inicio-1 .img,
+  .card-aleatorio img,
   .carousel-item img {
-    width: 50px; /* Ajusta o tamanho das imagens no carrossel */
-    height: 50px; /* Ajusta o tamanho das imagens no carrossel */
-  }
-
-  .titulo-inicio h2::before {
-    width: 3%; /* Ajusta a largura da linha decorativa no título */
-  }
-
-  .carousel-control {
-    font-size: 0.8rem; /* Ajusta o tamanho da fonte dos controles do carrossel */
-    padding: 6px; /* Ajusta o padding dos controles do carrossel */
-  }
-
-  .cards {
-    width: 100%; /* Ajusta a largura dos cartões */
-    height: auto; /* Ajusta a altura dos cartões */
-    padding: 10px; /* Ajusta o padding dos cartões */
+    width: 300px; /* Ajusta a largura da imagem */
+    height: 300px; /* Ajusta a altura da imagem */
+    object-fit: cover; /* Garante que a imagem mantenha o aspecto e não estique */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
   }
 }
 
