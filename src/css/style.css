@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
@@ -22,7 +21,6 @@ body {
 a {
   color: #fff;
 }
-
 
 .header {
   position: relative;
@@ -294,7 +292,7 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 20px;
   gap: 20px;
   align-items: center;
   list-style: none;
@@ -373,7 +371,9 @@ img {
 .container-cards-inicio .img-inicio img,
 .container-cards-inicio .img img,
 .servicos .img img,
-.container-cards-inicio-1 img {
+.container-cards-inicio-1 img ,
+.card-aleatorio img,
+.carrosel-images img{
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -737,15 +737,20 @@ ul {
     gap: 1rem; /* Espaçamento opcional entre os itens */
   }
 
-  .container-cards-inicio-1 .img,
+  .container-cards-inicio-1 img,
   .card-aleatorio img,
-  .carousel-item img {
-    width: 300px; /* Ajusta a largura da imagem */
+  .container-cards-inicio img,
+  .servicos .img img,
+  .carrosel-images img{
+    display: flex; /* Ajusta a largura da imagem */
     height: 300px; /* Ajusta a altura da imagem */
     object-fit: cover; /* Garante que a imagem mantenha o aspecto e não estique */
     max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
     max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
+    justify-content: center;
+    align-items: center;
   }
+
 
   .titulo-inicio h2::before {
     width: 5%; /* Ajusta a largura da linha decorativa no título */
@@ -792,12 +797,18 @@ ul {
 
 /* Responsividade para telas muito pequenas */
 @media screen and (max-width: 320px) {
-  .container-cards-inicio .img,
-  .container-cards-inicio-1 .img,
-  .card-aleatorio img,
-  .carousel-item img {
-    width: 300px; /* Ajusta a largura da imagem */
-    height: 300px; /* Ajusta a altura da imagem */
+  .container-cards-inicio img,
+  .container-cards-inicio-1 img,
+  .card-aleatorio img {
+    width: 100%; /* Ajusta a largura da imagem */
+    height: 100%; /* Ajusta a altura da imagem */
+    object-fit: cover; /* Garante que a imagem mantenha o aspecto e não estique */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
+  }
+  .carousel-item img{
+    width: 50px; /* Ajusta a largura da imagem */
+    height: 50px; /* Ajusta a altura da imagem */
     object-fit: cover; /* Garante que a imagem mantenha o aspecto e não estique */
     max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
     max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
