@@ -50,27 +50,57 @@ a {
   display: block;
 }
 
+.navbar a{
+  text-decoration: none;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .navbar li {
   margin: 0 10px;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+.nav-item a {
+  color: #e1e1e1;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.navbar a:hover {
-  background-color: #555;
+.nav-item a:focus,
+.nav-item a:hover {
+  color: #fff;
+}
+
+.nav-item a:focus:after,
+.nav-item a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.nav-item a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .mobile-menu-icon,
@@ -251,7 +281,7 @@ main {
 
 .carousel-item p {
   font-size: 0.9rem;
-  color: #666;
+  color: #333333;
 }
 
 .carousel-control {
@@ -365,7 +395,6 @@ main {
 
 img {
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .container-cards-inicio .img-inicio img,
@@ -499,6 +528,13 @@ img {
   align-items: center;
   gap: 20px;
   padding: 20px;
+}
+
+.paragrafo-redes-sociais p{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin-bottom: 100px;
 }
 
 ul {
@@ -702,14 +738,14 @@ ul {
 }
 
 /* Responsividade para telas menores */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .header {
     height: 100vh; /* Ajusta a altura do header para telas menores */
     padding: 20px; /* Ajusta o padding do header */
   }
 
   .navbar {
-    padding: 1rem; /* Ajusta o padding da navbar */
+    padding: 0.8rem; /* Ajusta o padding da navbar */
   }
 
   .navbar ul {
