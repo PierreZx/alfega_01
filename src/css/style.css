@@ -26,7 +26,7 @@ a {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("/img/modern-office-building-features-luxury-skyline-view-generated-by-ai.jpg");
+  background-image: url("../img/modern-office-building-features-luxury-skyline-view-generated-by-ai.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -46,7 +46,7 @@ a {
   width: 100%;
   z-index: 2;
   background-color: #f1af097a;
-  padding: 10px 0;
+  padding: 1rem;
   display: block;
 }
 
@@ -208,7 +208,7 @@ main {
   width: 100%;
   height: 80vh;
   overflow: hidden;
-  background-image: url("/img/skyscraper-architecture-shines-generative-ai-sunset-generative-ai.jpg");
+  background-image: url("../img/skyscraper-architecture-shines-generative-ai-sunset-generative-ai.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
